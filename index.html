@@ -15,70 +15,101 @@
     </head>
 
 <body>
-    
-    <header>
-        <div class="header__superior">
-            <div class="logo">
-                <img src="img/logo.jpg" alt="">
-            </div>
-            <aside id="der">
-                <h3>Ingreso</h3>
-                <form>
-                    <input type="email" placeholder="Correo">
-                    
-                    <input type="password" placeholder="Contraseña">
-        
-                    <input type="submit" value="Enviar">
-        
-                    <p>¿No tienes una cuenta?<a class="link" href="registro.html">Registrarse</a></p>
-                </form>
-        
-            </aside>
-            <div class="search">
-                <input type="search" placeholder="¿Que deseas buscar?">
-            </div>
-        </div>
+    <div class="container">
+        <div class="header">
+            <header>
+                <div class="header__superior">
+                    <div class="logo">
+                        <img src="img/logo.jpg" alt="">
+                    </div>
+                    <aside id="der">
+                        <h3>Ingreso</h3>
+                        <form>
+                            <input type="email" placeholder="Correo">
+                            
+                            <input type="password" placeholder="Contraseña">
+                
+                            <input type="submit" value="Enviar">
+                
+                            <p>¿No tienes una cuenta?<a class="link" href="registro.html">Registrarse</a></p>
+                        </form>
+                
+                    </aside>
+                    <div class="search">
+                        <input type="search" placeholder="¿Que deseas buscar?">
+                    </div>
+                </div>
 
-        <div class="container__menu">
+                <div class="container__menu">
 
-            <div class="menu">
-                <input type="checkbox" id="check__menu">
-                <label id="#label__check" for="check__menu">
-                    <i class="fa-solid fa-bars icon__menu"></i>
-                </label>
-                <nav>
-                    <ul>
-                        <li><a href="#" id="">Inicio</a></li>
-                        <li><a href="#">Categorias</a>
+                    <div class="menu">
+                        <input type="checkbox" id="check__menu">
+                        <label id="#label__check" for="check__menu">
+                            <i class="fa-solid fa-bars icon__menu"></i>
+                        </label>
+                        <nav>
                             <ul>
-                                <li><a href="POPULAR.html">Popular</a></li>
-                                <li><a href="POLITICA.html">Política</a></li>
-                                <li><a href="DEPORTE.html">Deportes</a></li>
+                                <li><a href="#" id="">Inicio</a></li>
+                                <li><a href="#">Categorias</a>
+                                    <ul>
+                                        <li><a href="POPULAR.html">Popular</a></li>
+                                        <li><a href="POLITICA.html">Política</a></li>
+                                        <li><a href="DEPORTE.html">Deportes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="Formulario.html">Contactanos</a></li>
                             </ul>
-                        </li>
-                        <li><a href="Formulario.html">Contactanos</a></li>
-                    </ul>
-                </nav>
-            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
         </div>
-    </header>
-
+    </div>
     <main>
-        <article>
-            <h2>Pagina de servicios</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
-                inventore sunt architecto nihil enim doloremque dolores quisquam quidem
-                dolor? Ipsum nulla quo ex. Natus provident odio adipisci voluptate ad nulla.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum illo nobis, maxime
-                error labore odit ipsam placeat sint dolor veritatis iste temporibus obcaecati
-                odio nulla nisi. Quibusdam minima dignissimos qui?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam
-                provident labore et. Voluptas ut quidem laboriosam sequi doloribus adipisci numquam
-                nostrum officia laborum, ad, eius veniam alias ipsa deserunt.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio itaque animi
-                odit recusandae modi deserunt obcaecati veniam qui. Fugiat illo laborum rerum suscipit
-                tenetur quo placeat ullam quis, quidem error.</p>
-        </article>
+        <div class="container">
+            <div class="row justify-content-md-center"> 
+                <div class="col col-lg-12">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner" role="listbox" >
+                            <div class="carousel-item active">
+                                <a href="DEPORTE.html"><img src="img/deporte.png" class="d-block w-100"  alt="..." ></a>
+                                <div class="carousel-caption d-none d-md-block" style="font-size: xx-large;">
+                                <h5>Manchester City vs Bayern Munich</h5>
+                                <p>EN VIVO, horario y dónde ver Champions League Cuartos de Final</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="POPULAR.html"><img src="img/politica.png" class="d-block w-100"  alt="..." ></a>
+                                <div class="carousel-caption d-none d-md-block" style="font-size: xx-large;">
+                                <h5>En todo Chile:</h5>
+                                <p>Extienden criterio de prisión preventiva para detenidos sin identidad corroborada.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="POLITICA.html"><img src="img/Popular.png" class="d-block w-100"  alt="..." ></a>
+                                <div class="carousel-caption d-none d-md-block" style="font-size: xx-large;">
+                                <h5>Prisión preventiva</h5>
+                                <p>La Fiscalía de Chile extiende a todo el país el criterio de prisión preventiva para extranjeros detenidos sin documento de identidad</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>  
+        </div>
         <article>
             <h2>Pagina de Servicio</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora cum itaque laboriosam

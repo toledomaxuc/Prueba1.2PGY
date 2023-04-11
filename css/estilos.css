@@ -10,7 +10,7 @@
 
 header{
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background: #fff;
@@ -260,5 +260,25 @@ nav ul li ul li a:hover{
 }
 aside#der{
     padding-left: 80px;
+    
+}
+
+.content {
+    height:300px;
+    background:teal;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    line-height: 1;
+    width: 100%; 
+}
+
+.carousel-caption{
+    position: inherit;
+    float: none;
+    font-size: x-large;
     
 }
