@@ -1,5 +1,9 @@
+body{
+    background-color:rgb(204, 238, 238);
+}
+
 .col-md-6{
-    width: 200px;
+    width: 400px;
     height: 280px;
 
 
