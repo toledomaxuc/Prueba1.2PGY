@@ -4,4 +4,6 @@ body{
 .container{
     padding-left: 250px;
     background-color: rgb(223, 223, 247);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
