@@ -8,6 +8,11 @@ function validarFormulario() {
         return false; // Detener el envío del formulario
       }
 
+      if (nombre.length < 3) {
+        alert('Por ingrese un nombre minimo con 3 caracteres.');
+        return false;
+      }
+
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         alert('Por favor, ingresa un correo electrónico válido');
