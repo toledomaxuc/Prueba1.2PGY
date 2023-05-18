@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="registro.js"></script>
 </head>
 
 <body>
@@ -52,27 +53,24 @@
         </div>
     </header>
 
-    <div class="container">
-        <h1>Registro</h1>
-        <form>
-            <div class="form-group">
-                <label for="Nombre">Nombre:</label>
-                <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Nombre:</label>
-                <input type="email"  class="form-control" id="email"placeholder="Correo">
-            </div>
-
-            <div class="form-group">
-                <label for="contrasena">contrasena</label>
-                <input type="password" class="form-control" id="contrasena" placeholder="Contrasena">
-            </div>
-
-            <input type="submit" value="Registrar" class="button">
-        </form>
-    </div>
+    <form onsubmit="return validarRegistro();">
+        <div class="container">
+            <h1>Registro</h1>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Ingrese su contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
     integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
