@@ -1,9 +1,11 @@
 function validarRegistro() {
+    // Obtenemos los valores de los campos 
     var nombre = document.getElementById('nombre').value;
     var email = document.getElementById('email').value;
-    var contraseña = document.getElementById('contraseña').value;
+    var password = document.getElementById('password').value;
 
-    if (nombre === '' || email === '' || contraseña === '') {
+    
+    if (nombre === '' || email === '' || password === '') {
         alert('Por favor, completa todos los campos');
         return false; // Detener el envío del formulario
     }
@@ -18,17 +20,27 @@ function validarRegistro() {
         alert('Por favor, ingresa un correo electrónico válido');
         return false;
     }
-
-    // Validar el límite de caracteres en el campo de mensaje
-    var limiteCaracteres = 500; // Cambia el número según tus necesidades
-    var caracteresRestantes = limiteCaracteres - mensaje.length;
-
-    if (caracteresRestantes < 0) {
-        alert('Has superado el límite de caracteres permitidos');
-        return false; // Detener el envío del formulario
+    
+    if(validarPassword(password)){
+        alert('Contraseña valida, Registro realizado correctamente');
+        return true;
+        
+    }else{
+        alert('Contraseña invalida, debe tener al menos una mayuscula y un caracter especial');
+        return false;
+        
     }
 
-    // Mostrar el número de caracteres restantes
-    document.getElementById('caracteres-restantes').innerText = caracteresRestantes;
-    return true;
+    function validarPassword(password) {
+        // Validamos que la constraseña tenga al menos una mayuscula
+        if (!/[A-Z]/.test(password)) {
+            return false;
+        }
+        // Validamos que la contraseña tenga al menos un caracter especial
+        if (!/[!@#$%^&*()_++\-=[\]{};':"\\|,.<>/?]+/.test(password)) {
+            return false;
+        }
+        // Si se cumplen todas las condiciones, la contraseña es valida
+        return true;
+    }
 }
