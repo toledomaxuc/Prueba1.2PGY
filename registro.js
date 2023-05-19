@@ -1,9 +1,15 @@
 
 
 function validarRegistro() {
+
+
     // Obtenemos los valores de los campos nomnre, email y password.
+
+    var rut = document.getElementById('rut').value;
     var nombre = document.getElementById('nombre').value;
+    var apellidos = document.getElementById('apellidos').value;
     var email = document.getElementById('email').value;
+    var telefono = document.getElementById('telefono').value;
     var password = document.getElementById('password').value;
 
     
@@ -11,10 +17,19 @@ function validarRegistro() {
         alert('Ingresar todos los campos');
         return false; // Se detiene el envío del formulario.
     }
+    if(rut.length != 9){
+        alert('Por favor ingrese un rut valido');
+        return false;
+    }
 
     if (nombre.length < 3) {
-        alert('Por ingrese un nombre minimo con 3 caracteres.');
-        return false; 
+        alert('Por favor ingrese un nombre minimo con 3 caracteres.');
+        return false;
+    }
+    if(apellidos.length < 3){
+        alert('Por favor ingrese ambos apellidos.')
+        return false;
+
     }
 
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,6 +38,12 @@ function validarRegistro() {
         return false;
     }
     
+    var telefonoRegex = /^\d{9}$/;
+    if(!telefonoRegex.test(telefono)){
+        alert('Por favor ingrese un telefono valido.')
+        return false;
+    }
+
     if(validarPassword(password)){
         alert('Registro realizado correctamente');
         return true;
