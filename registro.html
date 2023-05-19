@@ -61,15 +61,18 @@
                 <div class="form-group">
                     <label for="rut">Rut:</label>
                     <input type="number" class="form-control" id="rut" placeholder="Ingrese su rut sin puntos ni guion">
+                    <span style="display: none">* Por favor ingrese su Rut como se indica</span>
 
                 </div>
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                    <span style="display: none">* Por favor ingrese su nombre</span>
                 </div>
                 <div class="form-group">
                      <label for="apellidos">Apellidos:</label>
                      <input type="text" class="form-control" id="apellidos" placeholder="Ingrese ambos apellidos ">
+                     <span style="display: none">* Ingrese los apellidos por favor</span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -79,6 +82,7 @@
                 <div class="form-group">
                     <label for="telefono">Telefono:</label>
                     <input type="number" class="form-control" id="telefono" placeholder="Ingrese su telefono">
+                    <span style="display: none">* Por favor facilite su numero despues de +56-</span>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
@@ -100,7 +104,6 @@
                 });
             </script>
             <script type="text/javascript">
-               
                 $(document).ready(function(){
                     $("input[type='password']").blur(function(){
                         if($(this).val() === ""){
@@ -110,7 +113,56 @@
                         }
                     });
                 });
-            </script>           
+            </script>    
+            
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("input#rut").blur(function(){
+                        if($(this).val() === ""){
+                            $(this).next("span").show();
+                        } else {
+                            $(this).next("span").hide();
+                        }
+                    });
+                });
+            </script>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("input#nombre").blur(function(){
+                        if($(this).val() === ""){
+                            $(this).next("span").show();
+                        } else {
+                            $(this).next("span").hide();
+                        }
+                    });
+                });
+            </script>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("input#apellidos").blur(function(){
+                        if($(this).val() === ""){
+                            $(this).next("span").show();
+                        } else {
+                            $(this).next("span").hide();
+                        }
+                    });
+                });
+            </script>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("input#telefono").blur(function(){
+                        if($(this).val() === ""){
+                            $(this).next("span").show();
+                        } else {
+                            $(this).next("span").hide();
+                        }
+                    });
+                });
+            </script>
+</script>
             
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
