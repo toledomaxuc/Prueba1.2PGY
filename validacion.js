@@ -13,6 +13,7 @@ function validarFormulario() {
         alert('Por ingrese un nombre minimo con 3 caracteres.');
         return false;
       }
+      
 
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
