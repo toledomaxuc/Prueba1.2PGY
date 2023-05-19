@@ -1,3 +1,4 @@
+
 function validarFormulario() {
     var nombre = document.getElementById('nombre').value;
     var email = document.getElementById('email').value;

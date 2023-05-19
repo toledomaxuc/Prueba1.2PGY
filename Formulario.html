@@ -65,6 +65,7 @@
 			<div class="form-group">
 				<label for="email">Email:</label>
 				<input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+				<span style="display: none">* Email incorrecto</span>
 			</div>
 			<div class="form-group">
 				<label for="mensaje">Mensaje:</label>
@@ -72,10 +73,23 @@
 					placeholder="Escribe lo que necesitas y ya te responderemos"
 					onkeyup="validarFormulario();"></textarea>
 					<small>Caracteres restantes: <span id="caracteres-restantes">500</span></small>
+					<span style="display: none">* Ingrese un mensaje válido</span>
 			</div>
 			<button type="submit" class="btn btn-primary">Enviar</button>
+			<button type="reset" class="btn btn-primary">Limpiar campos</button>
 		</form>
-	</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("input[type='email']").blur(function(){
+					if($(this).val() === ""){
+						$(this).next("span").show();
+					} else {
+						$(this).next("span").hide();
+					}
+				});
+			});
+		</script>
+	</div>	
 </body>
 </html>
 
