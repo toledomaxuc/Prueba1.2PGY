@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="registro.js"></script>
@@ -56,7 +57,7 @@
     <form onsubmit="return validarRegistro();">
         <div class="container">
             <h1>Registro</h1>
-            <form>
+            <form method="POST" name="formularioRegistro">
                 <div class="form-group">
                     <label for="rut">Rut:</label>
                     <input type="number" class="form-control" id="rut" placeholder="Ingrese su rut sin puntos ni guion">
@@ -73,6 +74,7 @@
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+                    <span style="display: none">* Email incorrecto</span>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Telefono:</label>
@@ -81,9 +83,35 @@
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
                     <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                    <span style="display: none">* Contraseña incorrecta</span>
                 </div>
                 <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="reset" class="btn btn-primary">Limpiar campos</button>
             </form>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("input[type='email']").blur(function(){
+                        if($(this).val() === ""){
+                            $(this).next("span").show();
+                        } else {
+                            $(this).next("span").hide();
+                        }
+                    });
+                });
+            </script>
+            <script type="text/javascript">
+               
+                $(document).ready(function(){
+                    $("input[type='password']").blur(function(){
+                        if($(this).val() === ""){
+                            $(this).next("span").show();
+                        } else {
+                            $(this).next("span").hide();
+                        }
+                    });
+                });
+            </script>           
+            
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
     integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
